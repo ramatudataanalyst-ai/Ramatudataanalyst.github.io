@@ -21,10 +21,10 @@ body {
 
 /* PROFILE IMAGE – NO CROP */
 .profile-pic {
-  width: 340px;          /* 👈 MAKES IT LARGE */
-  max-width: 90%;
+  width: 100%;          /* 👈 MAKES IT LARGE */
+  max-width: 100%;
   height: auto;
-  border-radius: 18px;
+  border-radius: 0;
   object-fit: contain;   /* NO CROP */
   padding: 12px;
   background: #020617;
@@ -132,3 +132,4 @@ footer {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
+
