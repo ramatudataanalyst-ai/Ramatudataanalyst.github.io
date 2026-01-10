@@ -63,7 +63,7 @@ body {
   font-weight: 900;  /* MORE BOLD */
   font-size: 2rem;
   white-space: nowrap;
-  animation: rollerCoaster 4s ease-in-out infinite;
+  animation: swingBounce 4s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -136,12 +136,12 @@ p {
 }
 
 /* ANIMATION KEYFRAMES */
-@keyframes rollerCoaster {
-  0% { transform: translate(-50%, -50%) translateY(0px); }
-  25% { transform: translate(-50%, -50%) translateY(-20px); }
-  50% { transform: translate(-50%, -50%) translateY(0px); }
-  75% { transform: translate(-50%, -50%) translateY(20px); }
-  100% { transform: translate(-50%, -50%) translateY(0px); }
+@keyframes swingBounce {
+  0% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) translateY(-25px) rotate(15deg); }
+  50% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
+  75% { transform: translate(-50%, -50%) translateY(25px) rotate(-15deg); }
+  100% { transform: translate(-50%, -50%) translateY(0px) rotate(0deg); }
 }
 
 /* FOOTER */
@@ -161,5 +161,4 @@ footer {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
-
 
