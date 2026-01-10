@@ -21,10 +21,10 @@ body {
 
 /* PROFILE IMAGE – NO CROP */
 .profile-pic {
-  width: 100%;          /* 👈 MAKES IT LARGE */
+  width: 100%;          /* FULL WIDTH */
   max-width: 100%;
   height: auto;
-  border-radius: 0;
+  border-radius: 0;      /* RECTANGULAR SHAPE */
   object-fit: contain;   /* NO CROP */
   padding: 12px;
   background: #020617;
@@ -40,11 +40,31 @@ body {
 }
 
 /* HOVER ANIMATION */
-.profile-pic:hover {
+.profile-container:hover .profile-pic {
   transform: translateY(-8px) scale(1.03);
   box-shadow:
     0 0 30px rgba(56, 189, 248, 0.6),
     0 0 60px rgba(56, 189, 248, 0.25);
+}
+
+/* PROFILE CONTAINER */
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* OVERLAY MESSAGE */
+.overlay-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 900;  /* MORE BOLD */
+  font-size: 2rem;
+  white-space: nowrap;
+  animation: rollerCoaster 4s ease-in-out infinite;
+  pointer-events: none;
 }
 
 /* HEADINGS */
@@ -115,6 +135,15 @@ p {
   box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }
 
+/* ANIMATION KEYFRAMES */
+@keyframes rollerCoaster {
+  0% { transform: translate(-50%, -50%) translateY(0px); }
+  25% { transform: translate(-50%, -50%) translateY(-20px); }
+  50% { transform: translate(-50%, -50%) translateY(0px); }
+  75% { transform: translate(-50%, -50%) translateY(20px); }
+  100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -132,4 +161,5 @@ footer {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
+
 
